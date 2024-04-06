@@ -4,6 +4,7 @@ import Home from './Home';
 import Login from './Login'
 import Register from './Register'
 import Select from './Select'
+import Bio from './Bio';
 export default function Layout() {
   return (
     <Router>
@@ -13,6 +14,8 @@ export default function Layout() {
 
         <Route path="/register" element={<Register/>} />
         <Route path="/select" element={<Select/>} />
+        <Route path="/bio" element={<Bio/>} />
+
 
       </Routes>
     </Router>
