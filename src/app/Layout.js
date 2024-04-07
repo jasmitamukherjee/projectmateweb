@@ -9,6 +9,7 @@ import Tabs from './Tabs'
 import Profile from './Profile';
 import Chat from './Chat';
 import ChatSelect from './ChatSelect'
+import Chatroom from './Chatroom'
 export default function Layout() {
   return (
     <Router>
@@ -23,6 +24,9 @@ export default function Layout() {
         <Route path="/profile" element={<Profile/>} />
         <Route path="/chat" element={<Chat/>} />
         <Route path="/chat/select" element={<ChatSelect/>} />
+        <Route path="/chat/chatroom" element={<Chatroom/>} />
+
+
 
 
 

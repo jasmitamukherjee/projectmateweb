@@ -220,7 +220,7 @@ const Chat = () => {
         </div>
         <div>
           {matches?.map((item, index) => (
-            <UserChat key={index} userId={userId} profiles={profiles} /> 
+            <UserChat key={index} userId={userId} item={item} /> 
           ))}
         </div>
       </div>
