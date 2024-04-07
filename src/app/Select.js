@@ -65,7 +65,7 @@ export default function Select() {
       <div
         onClick={() => setOption('female')}
         style={{
-          backgroundColor: '#F0F0F0',
+          backgroundColor: option === 'female' ? '#F0F0F0':"#gray",
           padding: 12,
           justifyContent: 'space-between',
           flexDirection: 'row',
@@ -87,7 +87,7 @@ export default function Select() {
       <div
         onClick={() => setOption('nonbinary')}
         style={{
-          backgroundColor: '#F0F0F0',
+          backgroundColor: option === 'nonbinary' ? '#F0F0F0':"#gray",
           padding: 12,
           justifyContent: 'space-between',
           flexDirection: 'row',

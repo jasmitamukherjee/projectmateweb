@@ -420,7 +420,7 @@ app.post("/create-match", async (req, res) => {
 
       $pull: { recievedLikes: selectedUserId },
     });
-
+// console.log("match created")
     res.sendStatus(200);
   } catch (error) {
     res.status(500).json({ message: "Error creating a match", error });

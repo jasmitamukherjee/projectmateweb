@@ -5,6 +5,106 @@ import axios from 'axios';
 import { jwtDecode } from 'jwt-decode';
 
 export default function Bio() {
+    // const [option, setOption] = useState("Description");
+    // const [description, setDescription] = useState("");
+    // const [userId, setUserId] = useState("");
+    // const [selectedKeywords, setSelectedKeywords] = useState([]);
+    // const [lookingOptions, setLookingOptions] = useState([]);
+    // const [imageUrl, setImageUrl] = useState("");
+    // const [images, setImages] = useState([]);
+    // const [name, setName] = useState("");
+    // const [gender, setGender] = useState("");
+
+    // const fetchUser = async () => {
+    //     const token = localStorage.getItem('auth');
+    //     const decodedToken = jwtDecode(token);
+    //     const userId = decodedToken.userId;
+    //     setUserId(userId);
+    // };
+
+    // useEffect(() => {
+    //     fetchUser();
+    // }, []);
+
+    // const fetchUserDescription = async () => {
+    //     try {
+    //         const response = await axios.get(`http://192.168.0.4:4000/users/${userId}`);
+    //         const user = response.data;
+    //         setDescription(user?.user?.description);
+    //         setSelectedKeywords(user.user?.keywords);
+    //         setImages(user?.user.projectImages);
+    //         setLookingOptions(user?.user.lookingFor);
+    //         setName(user?.user.name);
+    //         setGender(user?.user.gender);
+    //     } catch (error) {
+    //         console.log("Error finding user description", error);
+    //     }
+    // };
+
+    // useEffect(() => {
+    //     if (userId) {
+    //         fetchUserDescription();
+    //     }
+    // }, [userId]);
+
+    // const updateUserDescription = async () => {
+    //     try {
+    //         const response = await axios.put(
+    //             `http://192.168.0.4:4000/users/${userId}/description`,
+    //             { description: description }
+    //         );
+
+    //         console.log(response.data);
+
+    //         if (response.status === 200) {
+    //             alert("Description updated successfully");
+    //         }
+    //     } catch (error) {
+    //         console.log("Error updating description for project", error);
+    //     }
+    // };
+
+    // const handleAddImage = async () => {
+    //     try {
+    //         const response = await axios.post(`http://192.168.0.4:4000/users/${userId}/project-images`, {
+    //             imageUrl: imageUrl
+    //         });
+
+    //         console.log(response);
+
+    //         setImageUrl("");
+    //     } catch (error) {
+    //         console.log("Error posting image", error);
+    //     }
+    // };
+
+   
+
+    // const handleToggleKeywords = (keywordName) => {
+    //     const updatedKeywords = selectedKeywords.includes(keywordName)
+    //         ? selectedKeywords.filter((keyword) => keyword !== keywordName)
+    //         : [...selectedKeywords, keywordName];
+    //     setSelectedKeywords(updatedKeywords);
+    //     console.log(selectedKeywords)
+    // };
+
+    // const handleOption = (optionName) => {
+    //     const updatedOptions = lookingOptions.includes(optionName)
+    //         ? lookingOptions.filter((option) => option !== optionName)
+    //         : [...lookingOptions, optionName];
+    //     setLookingOptions(updatedOptions);
+    //     console.log(lookingOptions)
+    // };
+
+    // const handleLogout = async () => {
+    //     try {
+    //         await localStorage.removeItem("auth");
+    //         window.location.replace("/");
+    //     } catch (error) {
+    //         console.log("Error", error);
+    //     }
+    // };
+
     const [option, setOption] = useState("Description");
     const [description, setDescription] = useState("");
     const [userId, setUserId] = useState("");
@@ -26,6 +126,12 @@ export default function Bio() {
         fetchUser();
     }, []);
 
+    useEffect(() => {
+        if (userId) {
+            fetchUserDescription();
+        }
+    }, [userId]);
+
     const fetchUserDescription = async () => {
         try {
             const response = await axios.get(`http://192.168.0.4:4000/users/${userId}`);
@@ -40,12 +146,6 @@ export default function Bio() {
             console.log("Error finding user description", error);
         }
     };
-
-    useEffect(() => {
-        if (userId) {
-            fetchUserDescription();
-        }
-    }, [userId]);
 
     const updateUserDescription = async () => {
         try {
@@ -78,21 +178,121 @@ export default function Bio() {
         }
     };
 
-   
+    // const handleToggleKeywords = (keywordName) => {
+    //     const updatedKeywords = selectedKeywords.includes(keywordName)
+    //         ? selectedKeywords.filter((keyword) => keyword !== keywordName)
+    //         : [...selectedKeywords, keywordName];
+    //     setSelectedKeywords(updatedKeywords);
+    //     localStorage.setItem('selectedKeywords', JSON.stringify(updatedKeywords));
+    // };
 
-    const handleToggleKeywords = (keywordName) => {
-        const updatedKeywords = selectedKeywords.includes(keywordName)
-            ? selectedKeywords.filter((keyword) => keyword !== keywordName)
-            : [...selectedKeywords, keywordName];
-        setSelectedKeywords(updatedKeywords);
-    };
+    // const handleOption = (optionName) => {
+    //     const updatedOptions = lookingOptions.includes(optionName)
+    //         ? lookingOptions.filter((option) => option !== optionName)
+    //         : [...lookingOptions, optionName];
+    //     setLookingOptions(updatedOptions);
+    //     localStorage.setItem('lookingOptions', JSON.stringify(updatedOptions));
+    // };
 
-    const handleOption = (optionName) => {
-        const updatedOptions = lookingOptions.includes(optionName)
-            ? lookingOptions.filter((option) => option !== optionName)
-            : [...lookingOptions, optionName];
-        setLookingOptions(updatedOptions);
-    };
+    
+const handleToggleKeywords= (keywords) =>{
+  // console.log("keywords",keywords)
+  if(selectedKeywords.includes(keywords)){
+    removeKeywords(keywords)
+  }else{
+    addKeywords(keywords)
+  }
+
+}
+const handleOption= (lookingFor)=>{
+  if(lookingOptions.includes(lookingFor)){
+    removeLookingFor(lookingFor)
+  }
+  else{
+    addLookingFor(lookingFor)
+  }
+}
+const addLookingFor= async (lookingFor)=>{
+  try {
+    const response = await axios.put(
+      `http://192.168.0.4:4000/users/${userId}/looking-for`,
+      {
+        lookingFor: lookingFor,
+      }
+    );
+
+    console.log(response.data);
+
+    if (response.status == 200) {
+      setLookingOptions([...lookingOptions, lookingFor]);
+    }
+
+    
+  } catch (error) {
+    console.log("Error adding looking for",error)
+  }
+}
+
+const removeLookingFor = async (lookingFor) => {
+  try {
+    const response = await axios.put(
+      `http://192.168.0.4:4000/users/${userId}/looking-for/remove`,
+      {
+        lookingFor: lookingFor,
+      }
+    );
+
+    console.log(response.data); // Log the response for confirmation
+
+    // Handle success or update your app state accordingly
+    if (response.status === 200) {
+      setLookingOptions(lookingOptions.filter((item) => item !== lookingFor));
+    }
+  } catch (error) {
+    console.error("Error removing looking for:", error);
+    // Handle error scenarios
+  }
+};
+const addKeywords= async (keywords)=>{
+  try {
+    const response = await axios.put(
+      `http://192.168.0.4:4000/users/${userId}/keywords/add`,
+      {
+        keywords: keywords,
+      }
+    );
+
+    console.log(response.data);
+
+    if (response.status == 200) {
+      setSelectedKeywords([...selectedKeywords, keywords]);
+    }
+    
+  } catch (error) {
+    console.log("Error adding keywords",error)
+    
+  }
+}
+const removeKeywords = async (keywords)=>{
+try {
+  const response = await axios.put(
+    `http://192.168.0.4:4000/users/${userId}/keywords/remove`,
+    {
+      keywords: keywords,
+    }
+  );
+
+  console.log(response.data);
+
+  if (response.status == 200) {
+    setSelectedKeywords(selectedKeywords.filter((item) => item !== keywords));
+  }
+  
+} catch (error) {
+  console.log("Error removing keywords",error)
+  
+}
+}
 
     const handleLogout = async () => {
         try {
@@ -102,6 +302,19 @@ export default function Bio() {
             console.log("Error", error);
         }
     };
+
+    useEffect(() => {
+        const storedSelectedKeywords = localStorage.getItem('selectedKeywords');
+        if (storedSelectedKeywords) {
+            setSelectedKeywords(JSON.parse(storedSelectedKeywords));
+        }
+
+        const storedLookingOptions = localStorage.getItem('lookingOptions');
+        if (storedLookingOptions) {
+            setLookingOptions(JSON.parse(storedLookingOptions));
+        }
+    }, []);
+
     const keywords = [
       {
         id: "0",
