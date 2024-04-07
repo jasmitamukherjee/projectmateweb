@@ -5,6 +5,9 @@ import Login from './Login'
 import Register from './Register'
 import Select from './Select'
 import Bio from './Bio';
+import Tabs from './Tabs'
+import Profile from './Profile';
+import Chat from './Chat';
 export default function Layout() {
   return (
     <Router>
@@ -15,6 +18,10 @@ export default function Layout() {
         <Route path="/register" element={<Register/>} />
         <Route path="/select" element={<Select/>} />
         <Route path="/bio" element={<Bio/>} />
+        <Route path="/tabs" element={<Tabs/>} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/chat" element={<Chat/>} />
+
 
 
       </Routes>

@@ -1,0 +1,33 @@
+.tabs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  align-items: flex-start;
+  }
+  
+  .tabs-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+  }
+  
+  .tabs-list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+  }
+  
+  .tabs-item {
+    margin-right: 20px;
+
+  }
+  
+  .tab-link {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .tab-link.active {
+    color: purple; /* Example of active tab color */
+  }
+  

@@ -1,0 +1,55 @@
+.profile-container {
+    padding: 15px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-container.even {
+    background-color: #eedff0;
+  }
+  
+  .profile-container.odd {
+    background-color: #ffffff;
+  }
+  
+  .profile-details {
+    flex: 1;
+  }
+  
+  .profile-images {
+    margin-right: 20px;
+  }
+  
+  .profile-actions {
+    display: flex;
+    align-items: center;
+  }
+  
+  .dots {
+    font-size: 26px;
+    cursor: pointer;
+  }
+  
+  .like-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .star-button, .heart-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .star-button.liked, .heart-button.selected {
+    background-color: #ffffff;
+  }
+  

@@ -30,7 +30,7 @@ export default function Select() {
 
       if (response.status === 200) {
         // Redirect user to '//bio' route after successful gender update
-        window.location.replace("/bio");    
+        window.location.replace("/tabs");    
         }
     } catch (error) {
       console.log('error', error);
@@ -43,7 +43,7 @@ export default function Select() {
       <div
         onClick={() => setOption('male')}
         style={{
-          backgroundColor: '#F0F0F0',
+          backgroundColor: option === 'male' ? '#F0F0F0':"#gray",
           padding: 12,
           justifyContent: 'space-between',
           flexDirection: 'row',
