@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';import Navbar from './Navbar'
+import Home from './Home';
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -13,7 +14,7 @@ export default function Register() {
       password: password,
     };
 
-    axios.post("http://192.168.0.4:4000/register", user)
+    axios.post("http://192.168.1.4:4000/register", user)
       .then((response) => {
         console.log(response);
         alert('Registration successful', 'You have been registered successfully');
@@ -28,7 +29,6 @@ export default function Register() {
   };
   return (
     <div>
-      <Navbar/>
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* <div style={{ height: 200, backgroundColor: "#c6a5d1", width: "100%", borderBottomRightRadius: 150, borderBottomLeftRadius: 150 }}>
         <div style={{ justifyContent: "center", alignItems: "center", marginTop: 5 }}>

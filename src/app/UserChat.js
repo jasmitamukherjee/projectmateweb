@@ -18,7 +18,7 @@ const UserChat = ({ item, userId }) => {
     try {
       const senderId = userId;
       const receiverId = item?._id;
-      const response = await axios.get("http://192.168.0.4:4000/messages", {
+      const response = await axios.get("http://192.168.1.4:4000/messages", {
         params: { senderId, receiverId },
       });
 

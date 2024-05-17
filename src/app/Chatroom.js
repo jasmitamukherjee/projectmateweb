@@ -15,7 +15,7 @@ const name = queryParams.get('name');
   //   const [message, setMessage] = useState("");
   //   const [messages, setMessages] = useState([]);
   //   const [selectedMessages, setSelectedMessages] = useState([]);
-  //   const socket = io("http://192.168.0.4:8000");
+  //   const socket = io("http://192.168.1.4:8000");
   //   socket.on("connect", () => {
   //     console.log("Connected to the Socket.IO server");
   //   });
@@ -41,7 +41,7 @@ const name = queryParams.get('name');
   //   const deleteMessages = async (messageIds) => {
   //     console.log("trying to delete")
   //     try {
-  //       const response = await axios.post("http://192.168.0.4:4000/delete", {
+  //       const response = await axios.post("http://192.168.1.4:4000/delete", {
   //         messages: messageIds, // Send selectedMessages array as messages
   //       });
   //       if (response.status === 200) {
@@ -64,7 +64,7 @@ const name = queryParams.get('name');
   //       // const receiverId = params?.receiverId;
   //       console.log("sender id",senderId)
   //       console.log("recieevr id",receiverId)
-  //       const response = await axios.get("http://192.168.0.4:4000/messages", {
+  //       const response = await axios.get("http://192.168.1.4:4000/messages", {
   //         params: { senderId, receiverId },
   //       });
   
@@ -125,6 +125,9 @@ const name = queryParams.get('name');
         </div>
 
       </div>
+      <center>
+  We are a work in progress !!
+</center>
 
       {/* <div  style={{
           display: "flex",

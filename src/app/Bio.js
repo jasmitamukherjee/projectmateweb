@@ -28,7 +28,7 @@ export default function Bio() {
 
     // const fetchUserDescription = async () => {
     //     try {
-    //         const response = await axios.get(`http://192.168.0.4:4000/users/${userId}`);
+    //         const response = await axios.get(`http://192.168.1.4:4000/users/${userId}`);
     //         const user = response.data;
     //         setDescription(user?.user?.description);
     //         setSelectedKeywords(user.user?.keywords);
@@ -50,7 +50,7 @@ export default function Bio() {
     // const updateUserDescription = async () => {
     //     try {
     //         const response = await axios.put(
-    //             `http://192.168.0.4:4000/users/${userId}/description`,
+    //             `http://192.168.1.4:4000/users/${userId}/description`,
     //             { description: description }
     //         );
 
@@ -66,7 +66,7 @@ export default function Bio() {
 
     // const handleAddImage = async () => {
     //     try {
-    //         const response = await axios.post(`http://192.168.0.4:4000/users/${userId}/project-images`, {
+    //         const response = await axios.post(`http://192.168.1.4:4000/users/${userId}/project-images`, {
     //             imageUrl: imageUrl
     //         });
 
@@ -134,7 +134,7 @@ export default function Bio() {
 
     const fetchUserDescription = async () => {
         try {
-            const response = await axios.get(`http://192.168.0.4:4000/users/${userId}`);
+            const response = await axios.get(`http://192.168.1.4:4000/users/${userId}`);
             const user = response.data;
             setDescription(user?.user?.description);
             setSelectedKeywords(user.user?.keywords);
@@ -150,7 +150,7 @@ export default function Bio() {
     const updateUserDescription = async () => {
         try {
             const response = await axios.put(
-                `http://192.168.0.4:4000/users/${userId}/description`,
+                `http://192.168.1.4:4000/users/${userId}/description`,
                 { description: description }
             );
 
@@ -166,7 +166,7 @@ export default function Bio() {
 
     const handleAddImage = async () => {
         try {
-            const response = await axios.post(`http://192.168.0.4:4000/users/${userId}/project-images`, {
+            const response = await axios.post(`http://192.168.1.4:4000/users/${userId}/project-images`, {
                 imageUrl: imageUrl
             });
 
@@ -215,7 +215,7 @@ const handleOption= (lookingFor)=>{
 const addLookingFor= async (lookingFor)=>{
   try {
     const response = await axios.put(
-      `http://192.168.0.4:4000/users/${userId}/looking-for`,
+      `http://192.168.1.4:4000/users/${userId}/looking-for`,
       {
         lookingFor: lookingFor,
       }
@@ -236,7 +236,7 @@ const addLookingFor= async (lookingFor)=>{
 const removeLookingFor = async (lookingFor) => {
   try {
     const response = await axios.put(
-      `http://192.168.0.4:4000/users/${userId}/looking-for/remove`,
+      `http://192.168.1.4:4000/users/${userId}/looking-for/remove`,
       {
         lookingFor: lookingFor,
       }
@@ -256,7 +256,7 @@ const removeLookingFor = async (lookingFor) => {
 const addKeywords= async (keywords)=>{
   try {
     const response = await axios.put(
-      `http://192.168.0.4:4000/users/${userId}/keywords/add`,
+      `http://192.168.1.4:4000/users/${userId}/keywords/add`,
       {
         keywords: keywords,
       }
@@ -276,7 +276,7 @@ const addKeywords= async (keywords)=>{
 const removeKeywords = async (keywords)=>{
 try {
   const response = await axios.put(
-    `http://192.168.0.4:4000/users/${userId}/keywords/remove`,
+    `http://192.168.1.4:4000/users/${userId}/keywords/remove`,
     {
       keywords: keywords,
     }

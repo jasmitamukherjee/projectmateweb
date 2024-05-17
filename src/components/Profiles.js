@@ -10,7 +10,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
   const handleLike = async (selectedUserId) => {
     try {
       setLiked(true);
-      await axios.post("http://192.168.0.4:4000/send-like", {
+      await axios.post("http://192.168.1.4:4000/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId,
       });
@@ -29,7 +29,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
   const handleLikeOther = async (selectedUserId) => {
     try {
       setSelected(true);
-      await axios.post("http://192.168.0.4:4000/send-like", {
+      await axios.post("http://192.168.1.4:4000/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId,
       });
@@ -46,6 +46,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
   };
 
   return (
+    <center>
     <div className={`profile-container ${isEven ? 'even' : 'odd'}`}>
       <div className="profile-details">
         <h2>{item?.name}</h2>
@@ -64,7 +65,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
             className={`star-button ${liked ? 'liked' : ''}`}
             disabled={liked}
           >
-            <AiFillStar />
+            {/* <AiFillStar /> */}
           </button>
           <button
             onClick={() => handleLikeOther(item?._id)}
@@ -76,6 +77,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
         </div>
       </div>
     </div>
+    </center>
   );
 };
 

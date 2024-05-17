@@ -1,0 +1,316 @@
+.video-container {
+    width: 90%;
+    margin: 0 auto; /* Center the video horizontally */
+  }
+  
+  .video-player {
+    width: 100%; /* Ensure the video fills its container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .frame-child {
+    position: absolute;
+    top: 536.69px;
+    left: 1449.45px;
+    background-color: rgba(239, 202, 252, 0.5);
+    width: 237.8px;
+    height: 1106.3px;
+    transform: rotate(64.2deg);
+    transform-origin: 0 0;
+  }
+  /* Add styles for the three buttons */
+  .button {
+    background-color: var(--color-purple);
+    color: var(--color-black);
+    border: none;
+    padding: 10px 20px;
+    
+    margin-left: 5%;
+    margin-bottom: 60%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--color-dark-purple);
+  }
+  
+  
+  .frame-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--color-violet);
+    width: 100%;
+    height: 5%;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .ellipse-icon,
+  .frame-inner,
+  .image-1-icon {
+    position: absolute;
+    top: -40px;
+    left: 560px;
+    width: 322px;
+    height: 239px;
+    object-fit: cover;
+    z-index: 1;
+  }
+  .ellipse-icon,
+  .frame-inner {
+    top: 100px;
+    left: 836px;
+    width: 224px;
+    height: 220px;
+    z-index: 2;
+  }
+  .ellipse-icon {
+    top: 280px;
+    left: 1136px;
+    border-radius: 50%;
+    width: 280px;
+    height: 262px;
+    z-index: 1;
+  }
+  .rectangle-parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .connect-with-like-minded {
+    margin: 0;
+    align-self: stretch;
+    height: 240px;
+    position: relative;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .connect-with-like-minded-profe-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 140px 0 0;
+    box-sizing: border-box;
+    min-width: 468px;
+    max-width: 100%;
+  }
+  .back,
+  .rectangle-div {
+    position: absolute;
+    
+  }
+  .rectangle-div {
+    top: 0;
+    left: 0;
+    background-color: var(--color-violet);
+    width: 621px;
+  }
+  .back {
+    top: 20px;
+    left: 417px;
+    display: inline-block;
+    width: 80px;
+    min-width: 80px;
+    z-index: 1;
+  }
+  .rectangle-group {
+    align-self: stretch;
+    height: 80px;
+    position: relative;
+  }
+  .can-you-help,
+  .vector-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .can-you-help {
+    margin: 0;
+    top: 11px;
+    left: 54px;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    width: 238px;
+    height: 63px;
+    z-index: 1;
+  }
+  .vector-parent {
+    height: 116px;
+    flex: 1;
+    position: relative;
+  }
+  .frame-wrapper {
+    width: 422px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 65px;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-size: var(--font-size-17xl);
+  }
+  .frame-container {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 6px;
+    max-width: 100%;
+  }
+  .frame-child1,
+  .yes-i-can {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .yes-i-can {
+    margin: 0;
+    top: 25.5px;
+    left: 18px;
+    font-size: inherit;
+    font-weight: 400;
+    font-family: inherit;
+    display: inline-block;
+    width: 220px;
+    height: 48px;
+    z-index: 1;
+  }
+  .vector-group {
+    height: 110.5px;
+    flex: 1;
+    position: relative;
+  }
+  .frame-div {
+    width: 309.5px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 var(--padding-10xs);
+    box-sizing: border-box;
+    font-size: var(--font-size-17xl);
+  }
+  .frame-group {
+    width: 621px;
+    flex-direction: column;
+    gap: 124.5px;
+    min-width: 621px;
+    max-width: 100%;
+    font-size: var(--font-size-13xl);
+  }
+  .desktop-2,
+  .frame-group,
+  .frame-parent {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .frame-parent {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 59px;
+    max-width: 100%;
+  }
+  .desktop-2 {
+    width: 100%;
+    position: relative;
+    background-color: var(--color-white);
+    overflow: hidden;
+    flex-direction: column;
+    padding: 0 0 49px var(--padding-21xl);
+    box-sizing: border-box;
+    gap: 203px;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    font-size: 60px;
+    color: var(--color-black);
+    font-family: var(--font-merriweather);
+  }
+  @media screen and (max-width: 1125px) {
+    .frame-group {
+      flex: 1;
+    }
+    .frame-parent {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .connect-with-like-minded {
+      font-size: 48px;
+    }
+    .back {
+      font-size: var(--font-size-7xl);
+    }
+    .can-you-help,
+    .yes-i-can {
+      font-size: var(--font-size-10xl);
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .connect-with-like-minded-profe-wrapper,
+    .frame-group {
+      min-width: 100%;
+    }
+    .frame-group {
+      gap: 62px;
+    }
+    .frame-parent {
+      gap: 29px;
+    }
+    .desktop-2 {
+      gap: 101px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .connect-with-like-minded {
+      font-size: var(--font-size-17xl);
+    }
+    .connect-with-like-minded-profe-wrapper {
+      padding-top: 91px;
+      box-sizing: border-box;
+    }
+    .back {
+      font-size: var(--font-size-lgi);
+    }
+    .can-you-help {
+      font-size: var(--font-size-3xl);
+    }
+    .frame-wrapper {
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .yes-i-can {
+      font-size: var(--font-size-3xl);
+    }
+    .frame-group {
+      gap: var(--gap-12xl);
+    }
+    .desktop-2 {
+      gap: 51px;
+    }
+  }

@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import  { useState, useEffect } from 'react';
 import axios from 'axios';
+import Home from './Home';
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -21,7 +22,7 @@ export default function Login() {
       password: password,
     };
 
-    axios.post("http://192.168.0.4:4000/login", user)
+    axios.post("http://192.168.1.4:4000/login", user)
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("auth", token);
@@ -35,8 +36,7 @@ export default function Login() {
   return (
 
     <div>
-      <Navbar/>
-       <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+             <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
       {/* <div style={{ height: 200, backgroundColor: "#c6a5d1", width: "100%", borderBottomRightRadius: 150, borderBottomLeftRadius: 150, marginLeft: "auto", marginRight: "auto" }}>
         <img style={{ width: 150, height: 80, objectFit: "contain", marginTop: 25 }} src="https://cdn-icons-png.flaticon.com/512/2024/2024101.png" alt="logo" />
         <h1 style={{ marginTop: 20, textAlign: "center", fontSize: 20, fontWeight: "bold", fontFamily: "monospace", color: "white" }}>Project Mate</h1>
