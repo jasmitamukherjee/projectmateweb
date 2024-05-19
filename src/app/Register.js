@@ -14,7 +14,7 @@ export default function Register() {
       password: password,
     };
 
-    axios.post("http://192.168.1.4:4000/register", user)
+    axios.post("http://192.168.1.5:4000/register", user)
       .then((response) => {
         console.log(response);
         alert('Registration successful', 'You have been registered successfully');

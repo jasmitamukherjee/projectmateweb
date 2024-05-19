@@ -33,7 +33,7 @@ const Desktop = () => {
           <div className="frame-container">
             <div className="rectangle-group">
               <div className="rectangle-div" />
-              <div className="back">Back</div>
+              <div className="back"></div>
             </div>
             <div className="frame-wrapper">
               <div className="vector-parent">

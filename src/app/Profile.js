@@ -20,7 +20,7 @@ const Index = () => {
 
   const fetchUserDescription = async () => {
     try {
-      const response = await axios.get(`http://192.168.1.4:4000/users/${userId}`);
+      const response = await axios.get(`http://192.168.1.5:4000/users/${userId}`);
       console.log(response);
       const userData = response.data;
 
@@ -32,7 +32,7 @@ const Index = () => {
 
   const fetchProfiles = async () => {
     try {
-      const response = await axios.get("http://192.168.1.4:4000/profiles", {
+      const response = await axios.get("http://192.168.1.5:4000/profiles", {
         params: {
           userId: userId,
           gender: user?.gender,
