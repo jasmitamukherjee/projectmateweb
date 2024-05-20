@@ -22,7 +22,7 @@ export default function Login() {
       password: password,
     };
 
-    axios.post("http://192.168.1.5:4000/login", user)
+    axios.post("https://projectmateweb-back.onrender.com/login", user)
       .then((response) => {
         const token = response.data.token;
         localStorage.setItem("auth", token);

@@ -25,7 +25,7 @@
 
 //   const fetchReceivedLikesDetails = async () => {
 //     try {
-//       const response = await axios.get(`http://192.168.1.5:4000/received-likes/${userId}/details`);
+//       const response = await axios.get(`https://projectmateweb-back.onrender.com/received-likes/${userId}/details`);
 //       const receivedLikesDetails = response.data.receivedLikesDetails;
 //       setProfiles(receivedLikesDetails);
 //     } catch (error) {
@@ -35,7 +35,7 @@
 
 //   const fetchUserMatches = async () => {
 //     try {
-//       const response = await axios.get(`http://192.168.1.5:4000/users/${userId}/matches`);
+//       const response = await axios.get(`https://projectmateweb-back.onrender.com/users/${userId}/matches`);
 //       const userMatches = response.data.matches;
 //       setMatches(userMatches);
 //     } catch (error) {
@@ -138,7 +138,7 @@ const Chat = () => {
 
   const fetchReceivedLikesDetails = async () => {
     try {
-      const response = await axios.get(`http://192.168.1.5:4000/received-likes/${userId}/details`);
+      const response = await axios.get(`https://projectmateweb-back.onrender.com/received-likes/${userId}/details`);
       const receivedLikesDetails = response.data.receivedLikesDetails;
       setProfiles(receivedLikesDetails);
     } catch (error) {
@@ -148,7 +148,7 @@ const Chat = () => {
 
   const fetchUserMatches = async () => {
     try {
-      const response = await axios.get(`http://192.168.1.5:4000/users/${userId}/matches`);
+      const response = await axios.get(`https://projectmateweb-back.onrender.com/users/${userId}/matches`);
       const userMatches = response.data.matches;
       setMatches(userMatches);
     } catch (error) {

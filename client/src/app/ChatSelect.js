@@ -154,7 +154,7 @@ const ChatSelect = () => {
   const handleMatch = async (selectedUserId) => {
     console.log(selectedUserId)
     try {
-      const response = await axios.post('http://192.168.1.5:4000/create-match', {
+      const response = await axios.post('https://projectmateweb-back.onrender.com/create-match', {
         currentUserId: userId,
         selectedUserId: selectedUserId,
       });

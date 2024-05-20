@@ -22,7 +22,7 @@ export default function Select() {
   const updateUserGender = async () => {
     // console.log("click")
     try {
-      const response = await axios.put(`http://192.168.1.5:4000/users/${userId}/gender`, {
+      const response = await axios.put(`https://projectmateweb-back.onrender.com/users/${userId}/gender`, {
         gender: option
       });
 

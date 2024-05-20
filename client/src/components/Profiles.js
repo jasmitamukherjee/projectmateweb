@@ -10,7 +10,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
   const handleLike = async (selectedUserId) => {
     try {
       setLiked(true);
-      await axios.post("http://192.168.1.5:4000/send-like", {
+      await axios.post("https://projectmateweb-back.onrender.com/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId,
       });
@@ -29,7 +29,7 @@ const Profiles = ({ item, isEven, userId, setProfiles }) => {
   const handleLikeOther = async (selectedUserId) => {
     try {
       setSelected(true);
-      await axios.post("http://192.168.1.5:4000/send-like", {
+      await axios.post("https://projectmateweb-back.onrender.com/send-like", {
         currentUserId: userId,
         selectedUserId: selectedUserId,
       });
